@@ -22,8 +22,8 @@ title: Axtya Darius Barbano
 email: darius.barbano@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Interested in Software, Computer Science, and other things.
-baseurl: "/PersonalSite" # the subpath of your site, e.g. /blog
-url: "https://axtyax.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://dariusbarbano.com" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
 github_username:  axtyax
 
