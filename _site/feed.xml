@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-20T15:26:21-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Axtya Darius Barbano</title><subtitle>Interested in Software, Computer Science, and other things.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2020/07/19/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2020-07-19T13:19:41-04:00</published><updated>2020-07-19T13:19:41-04:00</updated><id>http://localhost:4000/jekyll/update/2020/07/19/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2020/07/19/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.MARKUP&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR&lt;/code&gt; is a four-digit number, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MONTH&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DAY&lt;/code&gt; are both two-digit numbers, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MARKUP&lt;/code&gt; is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">Training a feed-forward Neural Network with Back-propagation and Gradient Descent</title><link href="http://localhost:4000/machine/learning/2020/07/19/training-feedforward-ann.html" rel="alternate" type="text/html" title="Training a feed-forward Neural Network with Back-propagation and Gradient Descent" /><published>2020-07-19T13:19:41-04:00</published><updated>2020-07-19T13:19:41-04:00</updated><id>http://localhost:4000/machine/learning/2020/07/19/training-feedforward-ann</id><content type="html" xml:base="http://localhost:4000/machine/learning/2020/07/19/training-feedforward-ann.html">&lt;p&gt;The training of an Artificial Neural Network is dependent on an algorithm called Back-propagation, through which we calculate the effect each weight has on an error function.
+Each of these ‘effects’ is called a partial derivative, more specifically the &lt;i&gt;partial derivative&lt;/i&gt; of the error function with respect to a given weight.
+A collection of partial derivatives (one for each weight), is called the &lt;i&gt;gradient&lt;/i&gt;, and enables training using &lt;i&gt;gradient descent&lt;/i&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here’s the example network we’ll be working with. It has just two input neurons, two hidden neurons, and one output.
+We’ll also be using the Mean-Squared Error function to evaluate the correctness of each output.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/misc/ff_neural_net_1.jpg&quot; alt=&quot;simple feed-forward neural network 1&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;forward-propagation-in-a-feed-forward-network&quot;&gt;Forward-propagation in a feed-forward network&lt;/h2&gt;
+
+&lt;p&gt;To show what a forward-pass would look like through this network, let’s give it a simple set of weights and the inputs 1 and 2.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/misc/ff_neural_net_2.jpg&quot; alt=&quot;simple feed-forward neural network 2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As you can see, the final output of the network is $1.9$. We got this because each neuron after the input layer computes its value
+as the weighted sum of the values in the previous layer.
+People generally have no problem understanding the forward-pass when learning about neural networks,
+it’s Back-propagation (or backward-pass) that tends to be more difficult to comprehend.&lt;/p&gt;
+
+&lt;h2 id=&quot;computing-error&quot;&gt;Computing error&lt;/h2&gt;
+
+&lt;p&gt;The error (or cost) function gives a measure of how close the network’s output was to the desired output for any given input.
+Suppose that, given the inputs of $1$ and $2$ that we used in the above example, we would like the network to output the value $5$.
+As mentioned earlier, we will be using the Mean-Squared Error function, defined as:
+\(E = \frac{1}{2} \sum_{i = 1}^{n} (o_i - y_i)^2\)
+Where $o$ is a vector of $n$ outputs and $y$ is a vector of $n$ desired values for each output. &lt;br /&gt; &lt;br /&gt;
+In our network, the output was $1.9$ for the input $(0.1,0.2)$. Let’s suppose the desired value for this input was $1.0$. Then, the error would be:
+\(E = \frac{1}{2}(o_1 - y_1)^2 = \frac{1}{2}(n_{3,1} - y_1)^2 = \frac{1}{2}(1.9 - 1.0)^2 = 0.405\)
+That’s all there is to it, the error for this training example is $0.405$.&lt;/p&gt;
+
+&lt;h2 id=&quot;back-propagation&quot;&gt;Back-Propagation&lt;/h2&gt;
+
+&lt;p&gt;Now that we’ve discussed Forward-propagation and the procedure for computing error, let’s walk through back-propagation for this network.
+Keep in mind that we computed our error using a desired output value of $1$, so the gradient that will result from back-propagation will point the weights
+in a direction that will adjust the network to produce this output. In fact, we will test the network again later after we perform gradient descent to see
+if the output is closer to our desired value of $1$.&lt;/p&gt;
+
+&lt;p&gt;Let’s begin by computing the partial derivative of the error function with respect to the value in the output neuron. In other words, we want to figure out
+how the value in the output neuron affects the error (which is the value we want to minimize).
+\(\frac{\partial E}{\partial n_{3,1}} = \frac{\partial}{\partial n_{3,1}}(\frac{1}{2}(n_{3,1} - y_1)^2) = n_{3,1} - y_1\)
+The partial derivative here just requires a simple application of the power rule and chain rule. As you can see from the result,
+the instantaneous rate of change of the error with respect to the output of the network is just $n_{3,1} - y_1$.&lt;/p&gt;</content><author><name></name></author><category term="Machine" /><category term="Learning" /><summary type="html">The training of an Artificial Neural Network is dependent on an algorithm called Back-propagation, through which we calculate the effect each weight has on an error function. Each of these ‘effects’ is called a partial derivative, more specifically the partial derivative of the error function with respect to a given weight. A collection of partial derivatives (one for each weight), is called the gradient, and enables training using gradient descent.</summary></entry></feed>
