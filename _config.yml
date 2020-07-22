@@ -21,7 +21,7 @@
 title: Axtya Darius Barbano
 email: darius.barbano@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Interested in Software, Computer Science, and other things.
+  Software, Computer Science, and other things.
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://dariusbarbano.com" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
