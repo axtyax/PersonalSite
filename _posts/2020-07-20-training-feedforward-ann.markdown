@@ -2,7 +2,7 @@
 layout: post
 title:  "Training a feed-forward Neural Network with Back-propagation and Gradient Descent"
 date:   2020-07-19 13:19:41 -0400
-categories: Machine Learning
+categories: Machine_Learning
 ---
 
 The training of an Artificial Neural Network is dependent on an algorithm called Back-propagation, through which we calculate the effect each weight has on an error function.
@@ -12,14 +12,14 @@ A collection of partial derivatives (one for each weight), is called the <i>grad
 Here's the example network we'll be working with. It has just two input neurons, two hidden neurons, and one output.
 We'll also be using the Mean-Squared Error function to evaluate the correctness of each output.
 
-![simple feed-forward neural network 1](/misc/ff_neural_net_1.jpg)
+![simple feed-forward neural network 1](/images/ff_neural_net_1.jpg)
 
 
 ## Forward-propagation in a feed-forward network
 
 To show what a forward-pass would look like through this network, let's give it a simple set of weights and the inputs 1 and 2.
 
-![simple feed-forward neural network 2](/misc/ff_neural_net_2.jpg)
+![simple feed-forward neural network 2](/images/ff_neural_net_2.jpg)
 
 As you can see, the final output of the network is $1.9$. We got this because each neuron after the input layer computes its value
 as the weighted sum of the values in the previous layer.

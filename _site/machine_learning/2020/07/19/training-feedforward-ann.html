@@ -9,15 +9,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="The training of an Artificial Neural Network is dependent on an algorithm called Back-propagation, through which we calculate the effect each weight has on an error function. Each of these ‘effects’ is called a partial derivative, more specifically the partial derivative of the error function with respect to a given weight. A collection of partial derivatives (one for each weight), is called the gradient, and enables training using gradient descent." />
 <meta property="og:description" content="The training of an Artificial Neural Network is dependent on an algorithm called Back-propagation, through which we calculate the effect each weight has on an error function. Each of these ‘effects’ is called a partial derivative, more specifically the partial derivative of the error function with respect to a given weight. A collection of partial derivatives (one for each weight), is called the gradient, and enables training using gradient descent." />
-<link rel="canonical" href="https://dariusbarbano.com/machine/learning/2020/07/19/training-feedforward-ann.html" />
-<meta property="og:url" content="https://dariusbarbano.com/machine/learning/2020/07/19/training-feedforward-ann.html" />
+<link rel="canonical" href="http://localhost:4000/machine_learning/2020/07/19/training-feedforward-ann.html" />
+<meta property="og:url" content="http://localhost:4000/machine_learning/2020/07/19/training-feedforward-ann.html" />
 <meta property="og:site_name" content="Axtya Darius Barbano" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-07-19T13:19:41-04:00" />
 <script type="application/ld+json">
-{"headline":"Training a feed-forward Neural Network with Back-propagation and Gradient Descent","dateModified":"2020-07-19T13:19:41-04:00","description":"The training of an Artificial Neural Network is dependent on an algorithm called Back-propagation, through which we calculate the effect each weight has on an error function. Each of these ‘effects’ is called a partial derivative, more specifically the partial derivative of the error function with respect to a given weight. A collection of partial derivatives (one for each weight), is called the gradient, and enables training using gradient descent.","datePublished":"2020-07-19T13:19:41-04:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://dariusbarbano.com/machine/learning/2020/07/19/training-feedforward-ann.html"},"url":"https://dariusbarbano.com/machine/learning/2020/07/19/training-feedforward-ann.html","@context":"https://schema.org"}</script>
+{"description":"The training of an Artificial Neural Network is dependent on an algorithm called Back-propagation, through which we calculate the effect each weight has on an error function. Each of these ‘effects’ is called a partial derivative, more specifically the partial derivative of the error function with respect to a given weight. A collection of partial derivatives (one for each weight), is called the gradient, and enables training using gradient descent.","@type":"BlogPosting","url":"http://localhost:4000/machine_learning/2020/07/19/training-feedforward-ann.html","headline":"Training a feed-forward Neural Network with Back-propagation and Gradient Descent","datePublished":"2020-07-19T13:19:41-04:00","dateModified":"2020-07-19T13:19:41-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/machine_learning/2020/07/19/training-feedforward-ann.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://dariusbarbano.com/feed.xml" title="Axtya Darius Barbano" /></head>
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Axtya Darius Barbano" /></head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125635751-6"></script>
 <script>
@@ -62,13 +62,13 @@ A collection of partial derivatives (one for each weight), is called the <i>grad
 <p>Here’s the example network we’ll be working with. It has just two input neurons, two hidden neurons, and one output.
 We’ll also be using the Mean-Squared Error function to evaluate the correctness of each output.</p>
 
-<p><img src="/misc/ff_neural_net_1.jpg" alt="simple feed-forward neural network 1" /></p>
+<p><img src="/images/ff_neural_net_1.jpg" alt="simple feed-forward neural network 1" /></p>
 
 <h2 id="forward-propagation-in-a-feed-forward-network">Forward-propagation in a feed-forward network</h2>
 
 <p>To show what a forward-pass would look like through this network, let’s give it a simple set of weights and the inputs 1 and 2.</p>
 
-<p><img src="/misc/ff_neural_net_2.jpg" alt="simple feed-forward neural network 2" /></p>
+<p><img src="/images/ff_neural_net_2.jpg" alt="simple feed-forward neural network 2" /></p>
 
 <p>As you can see, the final output of the network is $1.9$. We got this because each neuron after the input layer computes its value
 as the weighted sum of the values in the previous layer.
@@ -99,7 +99,7 @@ how the value in the output neuron affects the error (which is the value we want
 The partial derivative here just requires a simple application of the power rule and chain rule. As you can see from the result,
 the instantaneous rate of change of the error with respect to the output of the network is just $n_{3,1} - y_1$.</p>
 
-  </div><a class="u-url" href="/machine/learning/2020/07/19/training-feedforward-ann.html" hidden></a>
+  </div><a class="u-url" href="/machine_learning/2020/07/19/training-feedforward-ann.html" hidden></a>
 </article>
 
       </div>
@@ -120,7 +120,7 @@ the instantaneous rate of change of the error with respect to the output of the 
 </div>
 
       <div class="footer-col footer-col-3">
-        <p>Software, Computer Science, and other things.</p>
+        <p>Personal site of A. Darius Barbano</p>
       </div>
     </div>
 
