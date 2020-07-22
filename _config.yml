@@ -27,16 +27,10 @@ url: "https://dariusbarbano.com" # the base hostname & protocol for your site, e
 #twitter_username: jekyllrb
 github_username:  axtyax
 
-jekyll_analytics:
-  GoogleAnalytics:          # Add, if you want to track with Google Analytics
-    id: UA-125635751-3      # Required - replace with your tracking id
-    anonymizeIp: false      # Optional - Default: false - set to true for anonymized tracking
-
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-analytics
 
 
 
