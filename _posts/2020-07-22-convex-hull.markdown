@@ -1,11 +1,9 @@
 ---
 layout: post
-title:  "Convex Hull: algorithm and implementation in C++"
+title:  "Convex Hull: Algorithm and implementation in C++"
 date:   2020-07-22 14:19:41 -0400
 categories: Algorithms
 ---
-
-# Convex Hull: algorithm and implementation in C++
 
 Convex Hull is among the most widely used algorithms in computational geometry.
 The goal of the algorithm is simple:
