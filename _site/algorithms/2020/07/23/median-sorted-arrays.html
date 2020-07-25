@@ -3,9 +3,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Coding Problem: Median of two sorted arrays | Axtya Darius Barbano</title>
+<title>Coding Problem: Median of two sorted arrays (C++) | Axtya Darius Barbano</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Coding Problem: Median of two sorted arrays" />
+<meta property="og:title" content="Coding Problem: Median of two sorted arrays (C++)" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="The following problem is taken from Leetcode. The problem deals with taking two independently sorted arrays of values (with potentially different sizes), and returning the median of the combined set of values in the two arrays. Furthermore, the problem asks for an implementation in O(log(n+m)) time, where n and m are the sizes of the two arrays." />
 <meta property="og:description" content="The following problem is taken from Leetcode. The problem deals with taking two independently sorted arrays of values (with potentially different sizes), and returning the median of the combined set of values in the two arrays. Furthermore, the problem asks for an implementation in O(log(n+m)) time, where n and m are the sizes of the two arrays." />
@@ -15,18 +15,23 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-07-23T17:50:41-04:00" />
 <script type="application/ld+json">
-{"description":"The following problem is taken from Leetcode. The problem deals with taking two independently sorted arrays of values (with potentially different sizes), and returning the median of the combined set of values in the two arrays. Furthermore, the problem asks for an implementation in O(log(n+m)) time, where n and m are the sizes of the two arrays.","@type":"BlogPosting","url":"http://localhost:4000/algorithms/2020/07/23/median-sorted-arrays.html","headline":"Coding Problem: Median of two sorted arrays","datePublished":"2020-07-23T17:50:41-04:00","dateModified":"2020-07-23T17:50:41-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/algorithms/2020/07/23/median-sorted-arrays.html"},"@context":"https://schema.org"}</script>
+{"description":"The following problem is taken from Leetcode. The problem deals with taking two independently sorted arrays of values (with potentially different sizes), and returning the median of the combined set of values in the two arrays. Furthermore, the problem asks for an implementation in O(log(n+m)) time, where n and m are the sizes of the two arrays.","@type":"BlogPosting","url":"http://localhost:4000/algorithms/2020/07/23/median-sorted-arrays.html","headline":"Coding Problem: Median of two sorted arrays (C++)","datePublished":"2020-07-23T17:50:41-04:00","dateModified":"2020-07-23T17:50:41-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/algorithms/2020/07/23/median-sorted-arrays.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Axtya Darius Barbano" /></head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125635751-6"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125635751-6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'UA-125635751-6');
-</script>
+    gtag('config', 'UA-125635751-6');
+  </script>
+
+  <!-- Mathjax Support -->
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
 
   <body><header class="site-header" role="banner">
 
@@ -49,7 +54,7 @@
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Coding Problem: Median of two sorted arrays</h1>
+    <h1 class="post-title p-name" itemprop="name headline">Coding Problem: Median of two sorted arrays (C++)</h1>
     <p class="post-meta"><time class="dt-published" datetime="2020-07-23T17:50:41-04:00" itemprop="datePublished">
         Jul 23, 2020
       </time></p>
@@ -64,7 +69,7 @@
 
 <h2 id="partitioning-the-arrays">Partitioning the arrays</h2>
 
-<p>In finding a median, we will effectively be partitioning the entire set of numbers into two partitions, one that is entirely less than the median and one that is greater. We will use two values, <em>i</em> and <em>j</em> to denote positions in which to partition the first and second array, respectively.</p>
+<p>In finding a median, we will effectively be splitting the entire set of numbers into two partitions, one that is entirely less than the median and one that is greater. We will use two values, <em>i</em> and <em>j</em> to denote positions in which to partition the first and second array, respectively.</p>
 
 <p><strong>Example:</strong></p>
 <div class="center" style="font-size: 22px">
@@ -74,11 +79,103 @@ j = 4 <br />
 [ <span class="color_red">2 5 6 8</span> | <span class="color_blue">9 10 12 16 22 34</span> ] <br />
 </div>
 
-<h2 id="an-important-property-of-sorted-arrays">An important property of sorted arrays</h2>
+<h2 id="determining-if-a-given-partition-represents-the-median">Determining if a given partition represents the median</h2>
 
-<p>To help solve this problem, lets remind ourselves of an important property of sorted arrays. That is, the ability to perform <em>binary search</em>.</p>
+<p>Remember that the median divides the set equally (or almost equally) into two parts. In other words, any valid candidate for the median partition will be represented by values for <em>i</em> and <em>j</em>, such that the sum of the sizes of the two left partitions is either the same size as the right partitions, or exactly one greater.</p>
 
-<p>When</p>
+<p>Using the same arrayas as before, here would be a valid candidate:</p>
+
+<div class="center" style="font-size: 22px">
+i = 5 <br />
+j = 4 <br />
+[ <span class="color_red">1 2 4 5 10</span> | <span class="color_blue">15 25</span> ] <br />
+[ <span class="color_red">2 5 6 8</span> | <span class="color_blue">9 10 12 16 22 34</span> ] <br />
+</div>
+
+<p>As you can see, there are 9 elements in the left partition and 8 in the right partition. We can express this condition mathematically, as \((2i + 2j) = n + 1\).
+Dividing both sides, we get</p>
+
+\[i + j = \frac{n+1}{2}\]
+
+<p class="center">where \(n\) is the total number of elements.</p>
+
+<p>In case, you’re wondering if this formula will work for both odd and even numbers of elements, try plugging in values for \(i\), \(j\), and \(n\) in both situations. You’ll find that integer division (ie. flooring when there’s a decimal in the result), takes care of both cases.</p>
+
+<p>The next step is to define a condition to check if a partition with properly sized sides divids the elements the way the median is supposed to.</p>
+
+<p>Since the elements are already sorted, we only need to check elements located closest to the barriers of the partition. In this case, those elements are <span class="color_red">8</span>, <span class="color_red">10</span>, <span class="color_blue">9</span>, and <span class="color_blue">15</span>.</p>
+
+<p>Remember that we must make sure all elements on the left partition are less than or equal to the elements on the right, for it to represent the median. In other words, we must check the following conditions:</p>
+
+\[max(arr\_i\_left) \leq min(arr\_j\_right)\]
+
+\[max(arr\_j\_left) \leq min(arr\_i\_right)\]
+
+<p>To put all of this more clearly, a given partition, given by \(i\) and \(j\), represents the median of the two arrays iff:</p>
+
+<ol>
+  <li>\(i + j = \frac{n+1}{2}\) \(\)</li>
+  <li>\([max(arr\_i\_left) \leq min(arr\_j\_right)]\) &amp;&amp; \([max(arr\_j\_left) \leq min(arr\_i\_right)]\)</li>
+</ol>
+
+<h2 id="finding-the-median">Finding the median</h2>
+
+<p>We can use the conditions to check if a random partition represents the median:</p>
+
+<ol>
+  <li>\(5 + 4 = \frac{17 + 1}{2} = 9 \rightarrow true\) \(\)</li>
+  <li>\([10 \leq 9]\) &amp;&amp; \([8 \leq 15] \rightarrow false\)</li>
+</ol>
+
+<p>Notice that the second condition was false, specifically because the first array’s ‘max’ was greater than the second array’s ‘min’. This indicates that the values on the left side of the partition are too large, and <em>i</em> needs to be shifted left.</p>
+
+<p>Remember that the arrays are sorted, meaning we can make use of <em>binary search</em> to discover the correct partition. In this case, the correct value for <em>i</em> is less than what it currently is, so we can reduce <em>i</em> to be half way between 0 and its current position (ie. we will divide it by 2), to get \(i = 2\).</p>
+
+<p>With this new value of <em>i</em>, we need to adjust <em>j</em> so that the partition still equally divides all the elements. Using the formula we derived earlier:</p>
+
+\[2 + j = \frac{17+1}{2}\]
+
+\[j = 7\]
+
+<p>Giving the new partition:</p>
+
+<div class="center" style="font-size: 22px">
+i = 2 <br />
+j = 7 <br />
+[ <span class="color_red">1 2</span> | <span class="color_blue">4 5 10 15 25</span> ] <br />
+[ <span class="color_red">2 5 6 8 9 10 12</span> | <span class="color_blue">16 22 34</span> ] <br />
+</div>
+
+<p>Now notice that <span class="color_red">12</span> is greater than <span class="color_blue">4</span>, when it should not be. Now we know <em>i</em> is too low, and we can adjust it to be halfway between its current position \(i=2\) and its previous position of \(i=5\), which would be \(i=3\).</p>
+
+<div class="center" style="font-size: 22px">
+i = 3 <br />
+j = 6 <br />
+[ <span class="color_red">1 2 4</span> | <span class="color_blue">5 10 15 25</span> ] <br />
+[ <span class="color_red">2 5 6 8 9 10</span> | <span class="color_blue">12 16 22 34</span> ] <br />
+</div>
+
+<p>Once again notice that <span class="color_red">10</span> is greater than <span class="color_blue">5</span>, meaning <em>i</em> is still too low. Following in the binary search, we can set <em>i</em> to be halfway between its current position of \(i=3\) and \(i=5\), which would be \(i=4\).</p>
+
+<div class="center" style="font-size: 22px">
+i = 3 <br />
+j = 6 <br />
+[ <span class="color_red">1 2 4 5</span> | <span class="color_blue">10 15 25</span> ] <br />
+[ <span class="color_red">2 5 6 8 9</span> | <span class="color_blue">10 12 16 22 34</span> ] <br />
+</div>
+
+<p>Finally, the current parition satisfies both of the conditions stated previously.</p>
+
+<ol>
+  <li>\(3 + 6 = \frac{17 + 1}{2} = 9 \rightarrow true\) \(\)</li>
+  <li>\([5 \leq 10]\) &amp;&amp; \([9 \leq 10] \rightarrow true\)</li>
+</ol>
+
+<p>Extracting the median value is simple. Since the left partition is one larger than the right partition (because there is an odd number of elements), the median will be the largest number in the left partition. This can only be \(max(arr\_i\_left)\) or \(max(arr\_j\_left)\). In this case, those values are <span class="color_red">5</span> and <span class="color_red">9</span>.</p>
+
+<p>Therefor, the median of the two sorted arrays is <strong>9</strong>.</p>
+
+<h2 id="c-code-solution">C++ Code Solution</h2>
 
   </div><a class="u-url" href="/algorithms/2020/07/23/median-sorted-arrays.html" hidden></a>
 </article>

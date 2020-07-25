@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-23T18:40:10-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Axtya Darius Barbano</title><subtitle>Personal site of A. Darius Barbano</subtitle><entry><title type="html">Coding Problem: Median of two sorted arrays</title><link href="http://localhost:4000/algorithms/2020/07/23/median-sorted-arrays.html" rel="alternate" type="text/html" title="Coding Problem: Median of two sorted arrays" /><published>2020-07-23T17:50:41-04:00</published><updated>2020-07-23T17:50:41-04:00</updated><id>http://localhost:4000/algorithms/2020/07/23/median-sorted-arrays</id><content type="html" xml:base="http://localhost:4000/algorithms/2020/07/23/median-sorted-arrays.html">&lt;p&gt;The following problem is taken from &lt;a href=&quot;https://leetcode.com/problems/median-of-two-sorted-arrays&quot;&gt;Leetcode&lt;/a&gt;. The problem deals with taking two independently sorted arrays of values (with potentially different sizes), and returning the median of the combined set of values in the two arrays. Furthermore, the problem asks for an implementation in &lt;strong&gt;O(log(n+m))&lt;/strong&gt; time, where &lt;em&gt;n&lt;/em&gt; and &lt;em&gt;m&lt;/em&gt; are the sizes of the two arrays.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-07-25T16:51:21-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Axtya Darius Barbano</title><subtitle>Personal site of A. Darius Barbano</subtitle><entry><title type="html">Coding Problem: Median of two sorted arrays (C++)</title><link href="http://localhost:4000/algorithms/2020/07/23/median-sorted-arrays.html" rel="alternate" type="text/html" title="Coding Problem: Median of two sorted arrays (C++)" /><published>2020-07-23T17:50:41-04:00</published><updated>2020-07-23T17:50:41-04:00</updated><id>http://localhost:4000/algorithms/2020/07/23/median-sorted-arrays</id><content type="html" xml:base="http://localhost:4000/algorithms/2020/07/23/median-sorted-arrays.html">&lt;p&gt;The following problem is taken from &lt;a href=&quot;https://leetcode.com/problems/median-of-two-sorted-arrays&quot;&gt;Leetcode&lt;/a&gt;. The problem deals with taking two independently sorted arrays of values (with potentially different sizes), and returning the median of the combined set of values in the two arrays. Furthermore, the problem asks for an implementation in &lt;strong&gt;O(log(n+m))&lt;/strong&gt; time, where &lt;em&gt;n&lt;/em&gt; and &lt;em&gt;m&lt;/em&gt; are the sizes of the two arrays.&lt;/p&gt;
 
 &lt;h2 id=&quot;the-definition-of-median&quot;&gt;The definition of median&lt;/h2&gt;
 
@@ -6,7 +6,7 @@
 
 &lt;h2 id=&quot;partitioning-the-arrays&quot;&gt;Partitioning the arrays&lt;/h2&gt;
 
-&lt;p&gt;In finding a median, we will effectively be partitioning the entire set of numbers into two partitions, one that is entirely less than the median and one that is greater. We will use two values, &lt;em&gt;i&lt;/em&gt; and &lt;em&gt;j&lt;/em&gt; to denote positions in which to partition the first and second array, respectively.&lt;/p&gt;
+&lt;p&gt;In finding a median, we will effectively be splitting the entire set of numbers into two partitions, one that is entirely less than the median and one that is greater. We will use two values, &lt;em&gt;i&lt;/em&gt; and &lt;em&gt;j&lt;/em&gt; to denote positions in which to partition the first and second array, respectively.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt;&lt;/p&gt;
 &lt;div class=&quot;center&quot; style=&quot;font-size: 22px&quot;&gt;
@@ -16,11 +16,103 @@ j = 4 &lt;br /&gt;
 [ &lt;span class=&quot;color_red&quot;&gt;2 5 6 8&lt;/span&gt; | &lt;span class=&quot;color_blue&quot;&gt;9 10 12 16 22 34&lt;/span&gt; ] &lt;br /&gt;
 &lt;/div&gt;
 
-&lt;h2 id=&quot;an-important-property-of-sorted-arrays&quot;&gt;An important property of sorted arrays&lt;/h2&gt;
+&lt;h2 id=&quot;determining-if-a-given-partition-represents-the-median&quot;&gt;Determining if a given partition represents the median&lt;/h2&gt;
 
-&lt;p&gt;To help solve this problem, lets remind ourselves of an important property of sorted arrays. That is, the ability to perform &lt;em&gt;binary search&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Remember that the median divides the set equally (or almost equally) into two parts. In other words, any valid candidate for the median partition will be represented by values for &lt;em&gt;i&lt;/em&gt; and &lt;em&gt;j&lt;/em&gt;, such that the sum of the sizes of the two left partitions is either the same size as the right partitions, or exactly one greater.&lt;/p&gt;
 
-&lt;p&gt;When&lt;/p&gt;</content><author><name></name></author><category term="Algorithms" /><summary type="html">The following problem is taken from Leetcode. The problem deals with taking two independently sorted arrays of values (with potentially different sizes), and returning the median of the combined set of values in the two arrays. Furthermore, the problem asks for an implementation in O(log(n+m)) time, where n and m are the sizes of the two arrays.</summary></entry><entry><title type="html">Convex Hull: Algorithm and implementation in C++</title><link href="http://localhost:4000/algorithms/2020/07/22/convex-hull.html" rel="alternate" type="text/html" title="Convex Hull: Algorithm and implementation in C++" /><published>2020-07-22T14:19:41-04:00</published><updated>2020-07-22T14:19:41-04:00</updated><id>http://localhost:4000/algorithms/2020/07/22/convex-hull</id><content type="html" xml:base="http://localhost:4000/algorithms/2020/07/22/convex-hull.html">&lt;p&gt;Convex Hull is among the most widely used algorithms in computational geometry.
+&lt;p&gt;Using the same arrayas as before, here would be a valid candidate:&lt;/p&gt;
+
+&lt;div class=&quot;center&quot; style=&quot;font-size: 22px&quot;&gt;
+i = 5 &lt;br /&gt;
+j = 4 &lt;br /&gt;
+[ &lt;span class=&quot;color_red&quot;&gt;1 2 4 5 10&lt;/span&gt; | &lt;span class=&quot;color_blue&quot;&gt;15 25&lt;/span&gt; ] &lt;br /&gt;
+[ &lt;span class=&quot;color_red&quot;&gt;2 5 6 8&lt;/span&gt; | &lt;span class=&quot;color_blue&quot;&gt;9 10 12 16 22 34&lt;/span&gt; ] &lt;br /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;As you can see, there are 9 elements in the left partition and 8 in the right partition. We can express this condition mathematically, as \((2i + 2j) = n + 1\).
+Dividing both sides, we get&lt;/p&gt;
+
+\[i + j = \frac{n+1}{2}\]
+
+&lt;p class=&quot;center&quot;&gt;where \(n\) is the total number of elements.&lt;/p&gt;
+
+&lt;p&gt;In case, you’re wondering if this formula will work for both odd and even numbers of elements, try plugging in values for \(i\), \(j\), and \(n\) in both situations. You’ll find that integer division (ie. flooring when there’s a decimal in the result), takes care of both cases.&lt;/p&gt;
+
+&lt;p&gt;The next step is to define a condition to check if a partition with properly sized sides divids the elements the way the median is supposed to.&lt;/p&gt;
+
+&lt;p&gt;Since the elements are already sorted, we only need to check elements located closest to the barriers of the partition. In this case, those elements are &lt;span class=&quot;color_red&quot;&gt;8&lt;/span&gt;, &lt;span class=&quot;color_red&quot;&gt;10&lt;/span&gt;, &lt;span class=&quot;color_blue&quot;&gt;9&lt;/span&gt;, and &lt;span class=&quot;color_blue&quot;&gt;15&lt;/span&gt;.&lt;/p&gt;
+
+&lt;p&gt;Remember that we must make sure all elements on the left partition are less than or equal to the elements on the right, for it to represent the median. In other words, we must check the following conditions:&lt;/p&gt;
+
+\[max(arr\_i\_left) \leq min(arr\_j\_right)\]
+
+\[max(arr\_j\_left) \leq min(arr\_i\_right)\]
+
+&lt;p&gt;To put all of this more clearly, a given partition, given by \(i\) and \(j\), represents the median of the two arrays iff:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;\(i + j = \frac{n+1}{2}\) \(\)&lt;/li&gt;
+  &lt;li&gt;\([max(arr\_i\_left) \leq min(arr\_j\_right)]\) &amp;amp;&amp;amp; \([max(arr\_j\_left) \leq min(arr\_i\_right)]\)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;finding-the-median&quot;&gt;Finding the median&lt;/h2&gt;
+
+&lt;p&gt;We can use the conditions to check if a random partition represents the median:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;\(5 + 4 = \frac{17 + 1}{2} = 9 \rightarrow true\) \(\)&lt;/li&gt;
+  &lt;li&gt;\([10 \leq 9]\) &amp;amp;&amp;amp; \([8 \leq 15] \rightarrow false\)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Notice that the second condition was false, specifically because the first array’s ‘max’ was greater than the second array’s ‘min’. This indicates that the values on the left side of the partition are too large, and &lt;em&gt;i&lt;/em&gt; needs to be shifted left.&lt;/p&gt;
+
+&lt;p&gt;Remember that the arrays are sorted, meaning we can make use of &lt;em&gt;binary search&lt;/em&gt; to discover the correct partition. In this case, the correct value for &lt;em&gt;i&lt;/em&gt; is less than what it currently is, so we can reduce &lt;em&gt;i&lt;/em&gt; to be half way between 0 and its current position (ie. we will divide it by 2), to get \(i = 2\).&lt;/p&gt;
+
+&lt;p&gt;With this new value of &lt;em&gt;i&lt;/em&gt;, we need to adjust &lt;em&gt;j&lt;/em&gt; so that the partition still equally divides all the elements. Using the formula we derived earlier:&lt;/p&gt;
+
+\[2 + j = \frac{17+1}{2}\]
+
+\[j = 7\]
+
+&lt;p&gt;Giving the new partition:&lt;/p&gt;
+
+&lt;div class=&quot;center&quot; style=&quot;font-size: 22px&quot;&gt;
+i = 2 &lt;br /&gt;
+j = 7 &lt;br /&gt;
+[ &lt;span class=&quot;color_red&quot;&gt;1 2&lt;/span&gt; | &lt;span class=&quot;color_blue&quot;&gt;4 5 10 15 25&lt;/span&gt; ] &lt;br /&gt;
+[ &lt;span class=&quot;color_red&quot;&gt;2 5 6 8 9 10 12&lt;/span&gt; | &lt;span class=&quot;color_blue&quot;&gt;16 22 34&lt;/span&gt; ] &lt;br /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Now notice that &lt;span class=&quot;color_red&quot;&gt;12&lt;/span&gt; is greater than &lt;span class=&quot;color_blue&quot;&gt;4&lt;/span&gt;, when it should not be. Now we know &lt;em&gt;i&lt;/em&gt; is too low, and we can adjust it to be halfway between its current position \(i=2\) and its previous position of \(i=5\), which would be \(i=3\).&lt;/p&gt;
+
+&lt;div class=&quot;center&quot; style=&quot;font-size: 22px&quot;&gt;
+i = 3 &lt;br /&gt;
+j = 6 &lt;br /&gt;
+[ &lt;span class=&quot;color_red&quot;&gt;1 2 4&lt;/span&gt; | &lt;span class=&quot;color_blue&quot;&gt;5 10 15 25&lt;/span&gt; ] &lt;br /&gt;
+[ &lt;span class=&quot;color_red&quot;&gt;2 5 6 8 9 10&lt;/span&gt; | &lt;span class=&quot;color_blue&quot;&gt;12 16 22 34&lt;/span&gt; ] &lt;br /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Once again notice that &lt;span class=&quot;color_red&quot;&gt;10&lt;/span&gt; is greater than &lt;span class=&quot;color_blue&quot;&gt;5&lt;/span&gt;, meaning &lt;em&gt;i&lt;/em&gt; is still too low. Following in the binary search, we can set &lt;em&gt;i&lt;/em&gt; to be halfway between its current position of \(i=3\) and \(i=5\), which would be \(i=4\).&lt;/p&gt;
+
+&lt;div class=&quot;center&quot; style=&quot;font-size: 22px&quot;&gt;
+i = 3 &lt;br /&gt;
+j = 6 &lt;br /&gt;
+[ &lt;span class=&quot;color_red&quot;&gt;1 2 4 5&lt;/span&gt; | &lt;span class=&quot;color_blue&quot;&gt;10 15 25&lt;/span&gt; ] &lt;br /&gt;
+[ &lt;span class=&quot;color_red&quot;&gt;2 5 6 8 9&lt;/span&gt; | &lt;span class=&quot;color_blue&quot;&gt;10 12 16 22 34&lt;/span&gt; ] &lt;br /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Finally, the current parition satisfies both of the conditions stated previously.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;\(3 + 6 = \frac{17 + 1}{2} = 9 \rightarrow true\) \(\)&lt;/li&gt;
+  &lt;li&gt;\([5 \leq 10]\) &amp;amp;&amp;amp; \([9 \leq 10] \rightarrow true\)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Extracting the median value is simple. Since the left partition is one larger than the right partition (because there is an odd number of elements), the median will be the largest number in the left partition. This can only be \(max(arr\_i\_left)\) or \(max(arr\_j\_left)\). In this case, those values are &lt;span class=&quot;color_red&quot;&gt;5&lt;/span&gt; and &lt;span class=&quot;color_red&quot;&gt;9&lt;/span&gt;.&lt;/p&gt;
+
+&lt;p&gt;Therefor, the median of the two sorted arrays is &lt;strong&gt;9&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;c-code-solution&quot;&gt;C++ Code Solution&lt;/h2&gt;</content><author><name></name></author><category term="Algorithms" /><summary type="html">The following problem is taken from Leetcode. The problem deals with taking two independently sorted arrays of values (with potentially different sizes), and returning the median of the combined set of values in the two arrays. Furthermore, the problem asks for an implementation in O(log(n+m)) time, where n and m are the sizes of the two arrays.</summary></entry><entry><title type="html">Convex Hull: Algorithm and implementation in C++</title><link href="http://localhost:4000/algorithms/2020/07/22/convex-hull.html" rel="alternate" type="text/html" title="Convex Hull: Algorithm and implementation in C++" /><published>2020-07-22T14:19:41-04:00</published><updated>2020-07-22T14:19:41-04:00</updated><id>http://localhost:4000/algorithms/2020/07/22/convex-hull</id><content type="html" xml:base="http://localhost:4000/algorithms/2020/07/22/convex-hull.html">&lt;p&gt;Convex Hull is among the most widely used algorithms in computational geometry.
 The goal of the algorithm is simple:
 &lt;em&gt;Find the minimal set of points to represent a convex polygon that encloses all points in the space.&lt;/em&gt;&lt;/p&gt;
 
@@ -128,7 +220,7 @@ We’ll also be using the Mean-Squared Error function to evaluate the correctnes
 
 &lt;p&gt;&lt;img src=&quot;/images/ff_neural_net_2.jpg&quot; alt=&quot;simple feed-forward neural network 2&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;As you can see, the final output of the network is $1.9$. We got this because each neuron after the input layer computes its value
+&lt;p&gt;As you can see, the final output of the network is \(1.9\). We got this because each neuron after the input layer computes its value
 as the weighted sum of the values in the previous layer.
 People generally have no problem understanding the forward-pass when learning about neural networks,
 it’s Back-propagation (or backward-pass) that tends to be more difficult to comprehend.&lt;/p&gt;
@@ -136,23 +228,29 @@ it’s Back-propagation (or backward-pass) that tends to be more difficult to co
 &lt;h2 id=&quot;computing-error&quot;&gt;Computing error&lt;/h2&gt;
 
 &lt;p&gt;The error (or cost) function gives a measure of how close the network’s output was to the desired output for any given input.
-Suppose that, given the inputs of $1$ and $2$ that we used in the above example, we would like the network to output the value $5$.
-As mentioned earlier, we will be using the Mean-Squared Error function, defined as:
-\(E = \frac{1}{2} \sum_{i = 1}^{n} (o_i - y_i)^2\)
-Where $o$ is a vector of $n$ outputs and $y$ is a vector of $n$ desired values for each output. &lt;br /&gt; &lt;br /&gt;
-In our network, the output was $1.9$ for the input $(0.1,0.2)$. Let’s suppose the desired value for this input was $1.0$. Then, the error would be:
-\(E = \frac{1}{2}(o_1 - y_1)^2 = \frac{1}{2}(n_{3,1} - y_1)^2 = \frac{1}{2}(1.9 - 1.0)^2 = 0.405\)
-That’s all there is to it, the error for this training example is $0.405$.&lt;/p&gt;
+Suppose that, given the inputs of \(1\) and \(2\) that we used in the above example, we would like the network to output the value \(5\).
+As mentioned earlier, we will be using the Mean-Squared Error function, defined as:&lt;/p&gt;
+
+\[E = \frac{1}{2} \sum_{i = 1}^{n} (o_i - y_i)^2\]
+
+&lt;p&gt;Where \(o\) is a vector of \(n\) outputs and \(y\) is a vector of \(n\) desired values for each output. &lt;br /&gt; &lt;br /&gt;
+In our network, the output was \(1.9\) for the input \((0.1,0.2)\). Let’s suppose the desired value for this input was \(1.0\). Then, the error would be:&lt;/p&gt;
+
+\[E = \frac{1}{2}(o_1 - y_1)^2 = \frac{1}{2}(n_{3,1} - y_1)^2 = \frac{1}{2}(1.9 - 1.0)^2 = 0.405\]
+
+&lt;p&gt;That’s all there is to it, the error for this training example is \(0.405\).&lt;/p&gt;
 
 &lt;h2 id=&quot;back-propagation&quot;&gt;Back-Propagation&lt;/h2&gt;
 
 &lt;p&gt;Now that we’ve discussed Forward-propagation and the procedure for computing error, let’s walk through back-propagation for this network.
-Keep in mind that we computed our error using a desired output value of $1$, so the gradient that will result from back-propagation will point the weights
+Keep in mind that we computed our error using a desired output value of \(1\), so the gradient that will result from back-propagation will point the weights
 in a direction that will adjust the network to produce this output. In fact, we will test the network again later after we perform gradient descent to see
-if the output is closer to our desired value of $1$.&lt;/p&gt;
+if the output is closer to our desired value of \(1\).&lt;/p&gt;
 
 &lt;p&gt;Let’s begin by computing the partial derivative of the error function with respect to the value in the output neuron. In other words, we want to figure out
-how the value in the output neuron affects the error (which is the value we want to minimize).
-\(\frac{\partial E}{\partial n_{3,1}} = \frac{\partial}{\partial n_{3,1}}(\frac{1}{2}(n_{3,1} - y_1)^2) = n_{3,1} - y_1\)
-The partial derivative here just requires a simple application of the power rule and chain rule. As you can see from the result,
-the instantaneous rate of change of the error with respect to the output of the network is just $n_{3,1} - y_1$.&lt;/p&gt;</content><author><name></name></author><category term="Machine_Learning" /><summary type="html">The training of an Artificial Neural Network is dependent on an algorithm called Back-propagation, through which we calculate the effect each weight has on an error function. Each of these ‘effects’ is called a partial derivative, more specifically the partial derivative of the error function with respect to a given weight. A collection of partial derivatives (one for each weight), is called the gradient, and enables training using gradient descent.</summary></entry></feed>
+how the value in the output neuron affects the error (which is the value we want to minimize).&lt;/p&gt;
+
+\[\frac{\partial E}{\partial n_{3,1}} = \frac{\partial}{\partial n_{3,1}}(\frac{1}{2}(n_{3,1} - y_1)^2) = n_{3,1} - y_1\]
+
+&lt;p&gt;The partial derivative here just requires a simple application of the power rule and chain rule. As you can see from the result,
+the instantaneous rate of change of the error with respect to the output of the network is just \(n_{3,1} - y_1\).&lt;/p&gt;</content><author><name></name></author><category term="Machine_Learning" /><summary type="html">The training of an Artificial Neural Network is dependent on an algorithm called Back-propagation, through which we calculate the effect each weight has on an error function. Each of these ‘effects’ is called a partial derivative, more specifically the partial derivative of the error function with respect to a given weight. A collection of partial derivatives (one for each weight), is called the gradient, and enables training using gradient descent.</summary></entry></feed>

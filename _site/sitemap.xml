@@ -9,22 +9,32 @@
 
 <url>
   <loc>https://dariusbarbano.com/</loc>
-  <lastmod>2020-07-22T16:28:39+00:00</lastmod>
+  <lastmod>2020-07-24T17:19:47+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://dariusbarbano.com/about/</loc>
-  <lastmod>2020-07-22T16:28:39+00:00</lastmod>
+  <lastmod>2020-07-24T17:19:47+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://dariusbarbano.com/machine/learning/2020/07/19/training-feedforward-ann.html</loc>
-  <lastmod>2020-07-22T16:28:39+00:00</lastmod>
+  <loc>https://dariusbarbano.com/algorithms/2020/07/23/median-sorted-arrays.html</loc>
+  <lastmod>2020-07-24T17:19:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://dariusbarbano.com/algorithms/2020/07/22/convex-hull.html</loc>
+  <lastmod>2020-07-24T17:19:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://dariusbarbano.com/machine_learning/2020/07/19/training-feedforward-ann.html</loc>
+  <lastmod>2020-07-24T17:19:47+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://dariusbarbano.com/jekyll/update/2020/07/19/welcome-to-jekyll.html</loc>
-  <lastmod>2020-07-22T16:28:39+00:00</lastmod>
+  <lastmod>2020-07-24T17:19:47+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
