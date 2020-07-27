@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Coding Problem: Median of two sorted arrays (C++)"
+title:  "Median of two sorted arrays (C++) - Coding Problem"
 date:   2020-07-23 17:50:41 -0400
 categories: Algorithms
 ---
