@@ -16,7 +16,7 @@ The median of a set of numbers is a value in that set such that exactly half of 
 
 In finding a median, we will effectively be splitting the entire set of numbers into two partitions, one that is entirely less than the median and one that is greater. We will use two values, *i* and *j* to denote positions in which to partition the first and second array, respectively.
 
-**Example:**
+**Example:** 
 <div class="center" style="font-size: 22px">
 i = 3 <br/>
 j = 4 <br/>
